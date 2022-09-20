@@ -10,6 +10,7 @@ public class Mainframe extends javax.swing.JFrame {
     
     public Mainframe() {
         initComponents();
+        //This should go in its own function for scaling
         componentMap = new HashMap<String, Component>();
         Component[] components = this.getContentPane().getComponents();
         for(int i=0; i < components.length; i++) {
@@ -90,7 +91,7 @@ public class Mainframe extends javax.swing.JFrame {
         jButton16.setName("KPeriod"); // NOI18N
         jButton16.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton16MouseClicked(evt);
+                KPeriodMouseClick(evt);
             }
         });
         jButton16.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -195,7 +196,7 @@ public class Mainframe extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_KPeriodKeyPress
 
-    private void jButton16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton16MouseClicked
+    private void KPeriodMouseClick(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton16MouseClicked
         if(jTextPane1.getText().contains(".")){
             evt.consume();
         }else{
@@ -217,12 +218,11 @@ public class Mainframe extends javax.swing.JFrame {
         else return null;
     }
     
+    public static void stageArithmetic(){
+        
+    }
+
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -239,9 +239,7 @@ public class Mainframe extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Mainframe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
 
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Mainframe().setVisible(true);
