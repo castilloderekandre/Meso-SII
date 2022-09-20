@@ -6,7 +6,7 @@ import javax.swing.*;
 import java.util.*;
 
 public class Mainframe extends javax.swing.JFrame {
-    private HashMap componentMap;
+    private HashMap<String, Component> componentMap;
     
     public Mainframe() {
         initComponents();
