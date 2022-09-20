@@ -1,0 +1,110 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Interface",
+            "request": "launch",
+            "mainClass": "com.mycompany.promedionotas.Interface",
+            "projectName": "PromedioNotas"
+        },
+        {
+            "type": "java",
+            "name": "Launch Interface",
+            "request": "launch",
+            "mainClass": "com.mycompany.palindrome.Interface",
+            "projectName": "Palindrome"
+        },
+        {
+            "type": "java",
+            "name": "Launch Mainframe",
+            "request": "launch",
+            "mainClass": "Mainframe",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Launch E_Senx",
+            "request": "launch",
+            "mainClass": "E_Senx",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Launch D_Vector",
+            "request": "launch",
+            "mainClass": "D_Vector",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Launch G",
+            "request": "launch",
+            "mainClass": "G"
+        },
+        {
+            "type": "java",
+            "name": "Launch C_Cuadro",
+            "request": "launch",
+            "mainClass": "C_Cuadro"
+        },
+        {
+            "type": "java",
+            "name": "Launch B_Palindrome",
+            "request": "launch",
+            "mainClass": "B_Palindrome"
+        },
+        {
+            "type": "java",
+            "name": "Launch A_e",
+            "request": "launch",
+            "mainClass": "A_e"
+        },
+        {
+            "type": "java",
+            "name": "Launch Palindrome",
+            "request": "launch",
+            "mainClass": "Palindrome",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Launch Palindrome",
+            "request": "launch",
+            "mainClass": "Palindrome",
+            "projectName": "Programas_105f17e7"
+        },
+        {
+            "type": "java",
+            "name": "Launch B_Palindrome",
+            "request": "launch",
+            "mainClass": "B_Program",
+            "projectName": "Programas_105f17e7"
+        },
+        {
+            "name": "(gdb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "enter program name, for example ${workspaceFolder}/a.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "/path/to/gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ],
+    "version": "2.0.0"
+}

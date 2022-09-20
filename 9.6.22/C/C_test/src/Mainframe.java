@@ -15,11 +15,16 @@ public class Mainframe extends javax.swing.JFrame {
         }
         for(int i=0; i<10; i++){//Should have a null verification
             ((JButton)getComponentByName("K"+i)).addMouseListener(new MouseAdapter() {
-                public void mouseClicked(MouseEvent evt) {
-                    GlobalMouseClickEvent(evt);
+                public void mouseClicked(MouseEvent e) {
+                    GlobalMouseClickEvent(e);
                 }
             });
         }
+        jButton16.addMouseListener(new MouseAdapter() {
+            public void mouseClicked(MouseEvent e) {
+                PeriodCheck(e);
+            }
+        });
     }
 
     private void initComponents() {
@@ -176,6 +181,11 @@ public class Mainframe extends javax.swing.JFrame {
     
     public void GlobalMouseClickEvent(MouseEvent e){
         jTextPane1.setText(jTextPane1.getText() + ((JButton)e.getSource()).getText());
+    }
+
+    public void PeriodCheck(MouseEvent e){
+        if(jTextPane1.getText().contains(".")) return;
+        else jTextPane1.setText(jTextPane1.getText() + ".");
     }
 
     public Component getComponentByName(String name) {

@@ -119,13 +119,12 @@ public class Interface extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyReleased
-        jLabel6.setText(Integer.toString(jTextField1.getText().length()));
+    private void jTextField1KeyReleased(java.awt.event.KeyEvent evt) {
         if(checkPalindrome(jTextField1.getText())){
             jLabel7.setText("Si"); return;
         }
         jLabel7.setText("No");
-    }//GEN-LAST:event_jTextField1KeyReleased
+    }
 
     public static boolean checkPalindrome(String str){
         str=str.toLowerCase();
@@ -144,6 +143,7 @@ public class Interface extends javax.swing.JFrame {
         }
         StringBuilder inverse = new StringBuilder(str);
         inverse.reverse();
+        jLabel6.setText(Integer.toString(str.length()));
         return str.equals(inverse.toString());
     }
     
@@ -184,7 +184,7 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
+    private static javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;

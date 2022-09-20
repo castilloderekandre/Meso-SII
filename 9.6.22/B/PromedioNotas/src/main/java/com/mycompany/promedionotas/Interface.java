@@ -1,6 +1,6 @@
 package com.mycompany.promedionotas;
 
-import javax.swing.JOptionPane;
+import java.awt.event.*;
 
 public class Interface extends javax.swing.JFrame {
 
@@ -27,14 +27,13 @@ public class Interface extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(200, 200));
-        setSize(new java.awt.Dimension(200, 120));
+        setSize(new java.awt.Dimension(100, 100));
 
         jLabel1.setText("Nota 1:");
 
         jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTextField1KeyPressed(evt);
+                GlobalKeyPress(evt);
             }
         });
 
@@ -42,7 +41,7 @@ public class Interface extends javax.swing.JFrame {
 
         jTextField2.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTextField2KeyPressed(evt);
+                GlobalKeyPress(evt);
             }
         });
 
@@ -50,14 +49,14 @@ public class Interface extends javax.swing.JFrame {
 
         jTextField3.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTextField3KeyPressed(evt);
+                GlobalKeyPress(evt);
             }
         });
 
         jButton1.setText("Promediar");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
+                AverageClick(evt);
             }
         });
 
@@ -115,14 +114,14 @@ public class Interface extends javax.swing.JFrame {
         jButton2.setText("Nuevo");
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton2MouseClicked(evt);
+                ClearTXTs(evt);
             }
         });
 
         jButton3.setText("Salir");
         jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton3MouseClicked(evt);
+                ExitProgram(evt);
             }
         });
 
@@ -188,7 +187,7 @@ public class Interface extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+    private void AverageClick(MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         float average=Float.parseFloat(jTextField1.getText()) + Float.parseFloat(jTextField2.getText()) + Float.parseFloat(jTextField3.getText());
         average/=3;
         jLabel7.setText(Float.toString(average));
@@ -196,27 +195,20 @@ public class Interface extends javax.swing.JFrame {
         else jLabel5.setText("No Aprobo");
     }//GEN-LAST:event_jButton1MouseClicked
 
-    private void jTextField1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyPressed
-        jTextField3KeyPressed(evt);
-    }//GEN-LAST:event_jTextField1KeyPressed
-
-    private void jTextField2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField2KeyPressed
-        jTextField3KeyPressed(evt);
-    }//GEN-LAST:event_jTextField2KeyPressed
-
-    private void jTextField3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField3KeyPressed
-        if(!(evt.getKeyCode() >= 48 && evt.getKeyCode() <= 57)) {
-            evt.consume();
+    public void GlobalKeyPress(KeyEvent e){
+        if(!(e.getKeyCode() >= 48 && e.getKeyCode() <= 57)) {
+            e.consume();
+            return;
         }
-    }//GEN-LAST:event_jTextField3KeyPressed
+    }
 
-    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+    private void ClearTXTs(MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
         jTextField1.setText("");
         jTextField2.setText("");
         jTextField3.setText("");
     }//GEN-LAST:event_jButton2MouseClicked
 
-    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+    private void ExitProgram(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
         System.exit(0);
     }//GEN-LAST:event_jButton3MouseClicked
 
