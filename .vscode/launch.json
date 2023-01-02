@@ -2,6 +2,125 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch General",
+            "request": "launch",
+            "mainClass": "General",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Launch A1121",
+            "request": "launch",
+            "mainClass": "A1121",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Launch A1411",
+            "request": "launch",
+            "mainClass": "A1411",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Launch A3110",
+            "request": "launch",
+            "mainClass": "A3110",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Launch A1018",
+            "request": "launch",
+            "mainClass": "A1018",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Launch A1017",
+            "request": "launch",
+            "mainClass": "A1017",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Launch A1005",
+            "request": "launch",
+            "mainClass": "A1005",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Launch B0926",
+            "request": "launch",
+            "mainClass": "B0926",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Launch A0926",
+            "request": "launch",
+            "mainClass": "A0926",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Launch E0925",
+            "request": "launch",
+            "mainClass": "E0925",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Launch D0925",
+            "request": "launch",
+            "mainClass": "D0925",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Launch C0925",
+            "request": "launch",
+            "mainClass": "C0925",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Launch NewJFrame",
+            "request": "launch",
+            "mainClass": "NewJFrame",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Launch B0925",
+            "request": "launch",
+            "mainClass": "B0925",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Launch A0925",
+            "request": "launch",
+            "mainClass": "A0925",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Launch B092522",
+            "request": "launch",
+            "mainClass": "B092522",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Launch A092522",
+            "request": "launch",
+            "mainClass": "A092522",
+            "projectName": ""
+        },
+        {
+            "type": "java",
             "name": "Launch App",
             "request": "launch",
             "mainClass": "com.mesoamericana.app.App",

@@ -11,7 +11,7 @@ public class E_Senx {
         if(n<=0) return 0;
         float sum=x;
         for(int i=0; i<n-1; i++){
-            sum+=(Math.pow(x, 3+i)/calcF(3)) * (i%2==0 ? -1 : 1);
+            sum+=(Math.pow(x, 3+2*i)/calcF(3+2*i)) * (i%2==0 ? -1 : 1);
         }
         return sum;
     }

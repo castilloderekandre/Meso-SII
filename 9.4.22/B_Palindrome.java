@@ -32,7 +32,7 @@ public class B_Palindrome {
                 System.out.println("Es un palindromo");
             else
                 System.out.println("No es un palindromo");
-        }while(!in.equals("\r"));
+        }while(!in.equals("\n"));
         input.close();
     }
 }

@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.util.Random;
 import java.util.Scanner;
 
 public class G {
@@ -11,6 +12,7 @@ public class G {
         else if(x<0)
         {
             x=numero-1;
+            Random
         }
         return x;
     }

@@ -1,14 +1,12 @@
-package com.mesoamericana.app;
-
 import java.awt.event.*;
 import java.util.*;
 import java.util.Random;
 
 import javax.swing.JOptionPane;
 
-public class App extends javax.swing.JFrame {
+public class A0925 extends javax.swing.JFrame {
 
-    public App() {
+    public A0925() {
         initComponents();
     }
     @SuppressWarnings("unchecked")
@@ -102,14 +100,11 @@ public class App extends javax.swing.JFrame {
     public static int[] getPrimes(int[] v){
         List<Integer> primes = new ArrayList<Integer>();  
         for(int i : v){
-            int factors=2;
+            boolean prime=true;
             for(int j=2; j<i; j++){
-                if(i%j==0){
-                    factors++;
-                    break;
-                }
+                if(i%j==0){ prime=false; break; }
             }
-            if(factors==2) primes.add(i);
+            if(prime) primes.add(i);
         }
         int[] array = new int[primes.size()];
         for(int i=0; i<primes.size(); i++) array[i] = primes.get(i);
@@ -117,11 +112,12 @@ public class App extends javax.swing.JFrame {
     }
 
     public static void GlobalKeyRelease(KeyEvent e){
-        if(Integer.parseInt(jTFInit.getText())>=Integer.parseInt(jTFFin.getText())) {e.consume(); return;}
+        int init=Integer.parseInt(jTFInit.getText()), fin=Integer.parseInt(jTFFin.getText());
+        if(init>=fin) {e.consume(); return;}
         jLVectOut.setText("");
         Random r = new Random();
         for(int i=0; i<10; i++){
-            v[i]= Integer.parseInt(jTFInit.getText()) + r.nextInt(Integer.parseInt(jTFFin.getText()) - Integer.parseInt(jTFInit.getText()) + 1);
+            v[i]= init + r.nextInt(fin - init + 1);
         }
         jLVectOut.setText(Arrays.toString(v));
         int[] primes = getPrimes(v);
@@ -137,18 +133,18 @@ public class App extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(App.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(A0925.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(App.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(A0925.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(App.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(A0925.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(App.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(A0925.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
 
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new App().setVisible(true);
+                new A0925().setVisible(true);
             }
         });
     }
